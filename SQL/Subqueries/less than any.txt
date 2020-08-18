@@ -1,0 +1,17 @@
+
+To display all employees data if salary of employee
+ is more than min salary of 10th department
+
+
+
+Select * from employees where salary > 
+(select min(salary) from employees where department_id=10);
+
+
+
+
+
+
+
+Select * from employees where salary
+> Any (select salary from employees where department_id=10);

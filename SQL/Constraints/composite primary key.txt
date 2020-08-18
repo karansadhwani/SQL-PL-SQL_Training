@@ -1,0 +1,27 @@
+
+
+
+create table MYTABLE( name VARCHAR2(50),
+        id NUMBER,
+        salary NUMBER(8,2),
+        CONSTRAINT MYTABLE_NAME_ID_PK PRIMARY KEY (id)); 
+      
+      
+ insert into MYTABLE values ('CCZ',1,2546.20);
+ insert into MYTABLE values ('ADS',2,3548.21);
+ insert into MYTABLE values ('GDS',2,1548.21);
+
+
+
+COMPOSITE PRIMARY KEY
+
+
+create table MYTABLE( name VARCHAR2(50),
+        id NUMBER,
+        salary NUMBER(8,2),
+        CONSTRAINT MYTABLE_NAME_ID_PK PRIMARY KEY (id,name)); 
+      
+      
+ insert into MYTABLE values ('CCZ',1,2546.20);
+ insert into MYTABLE values ('ADS',2,3548.21);
+ insert into MYTABLE values ('GDS',2,1548.21);

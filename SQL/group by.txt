@@ -1,0 +1,32 @@
+
+
+
+SELECT     [column,] group_function(column), ...
+FROM	  table
+[WHERE	  condition]
+[GROUP BY  column]
+[HAVING    CONDITION-- GROUP FUNCTIONS
+[ORDER BY  column];
+
+SELECT   job_id, SUM(salary) PAYROLL
+FROM     employees
+WHERE    job_id NOT LIKE '%REP%'
+GROUP BY job_id
+HAVING   SUM(salary) > 13000
+ORDER BY SUM(salary);
+
+
+SELECT AVG(salary), MAX(salary),
+       MIN(salary), SUM(salary)
+FROM   employees
+WHERE  job_id LIKE '%REP%';
+
+
+SELECT   department_id, AVG(salary)
+FROM     employees
+GROUP BY department_id ;
+
+SELECT   department_id, AVG(salary)
+FROM     employees
+WHERE    AVG(salary) > 8000
+GROUP BY department_id;

@@ -1,0 +1,26 @@
+employee_id
+first_name
+last_name
+email
+ phone_number
+ hire_date
+ job_id
+ job_title
+ min_salary
+ max_salary
+ salary
+ commission_pct
+ manager_id
+ department_id
+ department_name
+ location_id
+ street_address
+ postal_code
+ city
+ state_province
+ country_id
+ country_name
+ region_id
+ region_name
+ mgr_first_name
+ mgr_last_name

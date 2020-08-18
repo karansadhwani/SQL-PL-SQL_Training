@@ -1,0 +1,10 @@
+Display the employees who are working in Kochhar's department
+
+
+
+select department_id from employees where last_name='Kochhar';
+
+select * from employees where department_id=90
+
+select * from employees where department_id=
+(select department_id from employees where last_name='Kochhar');

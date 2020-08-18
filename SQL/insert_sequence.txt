@@ -1,0 +1,21 @@
+
+
+
+create table emp(emp_id varchar2(20),
+name varchar2(20),sal number);
+
+insert into emp values('41797','jay',30000);
+
+commit
+
+
+
+create sequence emp_seq start with 41797
+increment by 1
+minvalue 1
+maxvalue 99999;
+
+
+insert into emp values(emp_seq.nextval,'kishore',40000);
+
+select * from emp;

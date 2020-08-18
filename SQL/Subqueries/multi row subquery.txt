@@ -1,0 +1,7 @@
+> any  --picks the min value from the list, which are more than min
+
+< any  -- picks the max value from the list, which are less than max value
+
+> all ---picks the max value from the list, which are more than max
+
+< all  ---picks the min value from the list,which areless than min

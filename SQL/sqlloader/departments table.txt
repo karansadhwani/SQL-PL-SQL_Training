@@ -1,0 +1,6 @@
+CREATE TABLE department
+(
+    department_code      VARCHAR2(2)      NOT NULL,
+	department_name      VARCHAR2(25)     NOT NULL,
+	CONSTRAINT pk_departments PRIMARY KEY (department_code)
+);

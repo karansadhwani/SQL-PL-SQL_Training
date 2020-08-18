@@ -1,0 +1,12 @@
+
+
+  Drop table first_pay_dept
+    
+   CREATE TABLE first_pay_dept
+   (jobcode      CHAR(2) CONSTRAINT prim_key_first_pay_dept PRIMARY KEY,
+   jobname      VARCHAR2(20) CONSTRAINT jobname_uk UNIQUE,
+   joblevel     VARCHAR2(5) CONSTRAINT joblevel_nn NOT NULL,
+   SALARY NUMBER(5) CONSTRAINT FIRST_SAL_CHK CHECK(SALARY > = 1000));
+   
+   select * from user_indexes where table_name='FIRST_PAY_DEPT'   
+   select * from user_ind_columns where table_name='FIRST_PAY_DEPT'

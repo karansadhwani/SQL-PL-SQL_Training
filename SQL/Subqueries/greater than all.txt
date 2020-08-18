@@ -1,0 +1,2 @@
+> all
+Write a query  to display all employees data if salary of employee is more than max salary of 20 th deptartment;

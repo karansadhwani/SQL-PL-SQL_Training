@@ -1,0 +1,8 @@
+create table test (staff_id varchar2(20),staff_name varchar2(20),
+                  sal number(6));
+                  
+                  insert into test values('41797','jay',30000);
+                  insert into test values('41797','jay',30000);
+                  insert into test values('41798','kishore',40000);
+                  
+                  select * from test;

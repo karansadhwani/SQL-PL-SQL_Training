@@ -1,0 +1,10 @@
+MA|Math
+PH|Physics
+CH|Chemistry
+EE|Electrical Engineering
+CS|Computer Science
+CE|Civil Engineering
+ME|Mechanical Engineering
+CM|Chemical Engineering
+LA|Liberal Arts
+MG|Engineering Management

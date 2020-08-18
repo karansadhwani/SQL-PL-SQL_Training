@@ -1,0 +1,4 @@
+SELECT last_name, salary,commission_pct, 
+salary+NVL(commission_pct, 0)
+  
+FROM employees

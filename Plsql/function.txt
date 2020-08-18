@@ -1,0 +1,35 @@
+
+
+[DECLARE]
+
+
+BEGIN
+  --statements
+
+[EXCEPTION]
+
+END;
+
+
+FUNCTION name
+RETURN datatype
+IS
+BEGIN
+  --statements
+  RETURN value;
+[EXCEPTION]
+
+END;
+
+
+create or replace function emp_pf_fn(v_salary number) return number is
+
+v_pf_amount number;
+begin
+  if v_salary > 0 then 
+    v_pf_amount := v_salary * 0.12;
+    return v_pf_amount;
+  end if;
+end;
+
+select emp_pf_fn(20000) from dual;

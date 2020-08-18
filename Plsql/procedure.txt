@@ -1,0 +1,71 @@
+[DECLARE]
+
+
+BEGIN
+  --statements
+
+[EXCEPTION]
+
+END;
+
+-------------
+
+PROCEDURE name
+IS
+
+BEGIN
+  --statements
+
+[EXCEPTION]
+
+END;
+
+
+
+declare
+cursor c1 is select * from employees;
+begin
+for i in c1 loop
+dbms_output.put_line(i.first_name);
+end loop;
+end;
+
+create or replace procedure Proc_EmpNames is
+cursor c1 is select * from employees;
+begin
+for i in c1 loop
+dbms_output.put_line(i.first_name);
+end loop;
+end;
+
+set serveroutput on
+begin
+Proc_EmpNames;
+end;
+
+
+
+set serveroutput on;
+declare
+v_empid employees.employee_id%type:=&vno;
+v_job         employees.job_id%type;
+begin
+select job_id into v_job from employees where employee_id = v_empid;
+dbms_output.put_line(v_job);
+end;
+
+
+
+
+create or replace procedure proc_job 
+(v_empid employees.employee_id%type) is 
+v_job employees.job_id%type;
+v_fist employees.first_name%type;
+
+begin
+
+Proc_EmpNames;
+select job_id,first_name into v_job,v_fist from employees where employee_id = v_empid;
+dbms_output.put_line(v_job||'   '||v_fist);
+end;
+

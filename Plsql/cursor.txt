@@ -1,0 +1,16 @@
+set serveroutput on
+declare
+cursor c_employees is
+select employee_id,first_name,last_name from employees;
+v_employee_id employees.employee_id%type;
+v_first_name employees.first_name%type;
+v_last_name employees.last_name%type;
+begin
+open c_employees;
+ loop
+fetch c_employees into v_employee_id,v_first_name,v_last_name;
+exit when c_employees%notfound;
+dbms_output.put_line(v_employee_id||'    '||v_last_name);
+end loop;
+close c_employees;
+end;

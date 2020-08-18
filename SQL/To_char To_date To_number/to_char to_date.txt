@@ -1,0 +1,14 @@
+
+ select to_char(sysdate,'dd/month/yyyy') from dual;
+
+ select to_char(sysdate,'dd-mm-yy') from dual;
+ 
+
+ select to_date('12-12-06','dd/mm/yy') from dual; 
+
+ select to_date('june/2010/15','month/yyyy/dd') from dual;
+ 
+ 
+ select to_char(sysdate,'dd-mon-yy') from dual;
+
+ select to_date(sysdate,'dd-mon-yy') from dual;

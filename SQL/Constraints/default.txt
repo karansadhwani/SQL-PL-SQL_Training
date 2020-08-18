@@ -1,0 +1,7 @@
+CREATE TABLE hire_dates(id  NUMBER(8),
+                        hire_date DATE DEFAULT SYSDATE);
+          
+         
+insert into hire_dates ( id) values(100);
+
+select * from hire_dates;

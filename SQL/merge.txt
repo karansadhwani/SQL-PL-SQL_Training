@@ -1,0 +1,31 @@
+create table sales(product varchar2(20),month date, amount number(10))
+
+
+insert into sales values('LG','01-Jan-17',20000);
+insert into sales values('sony','01-Jan-18',22000);
+insert into sales values('panasonic', '22-dec-17',18000);
+
+
+
+
+
+create table sales_history(product varchar2(20),month date, amount number(10))
+
+
+ 
+insert into sales_history values('sony', '22-dec-17',24000);
+insert into sales_history values('panasonic', '22-dec-17',18000);
+
+
+
+select * from sales;
+
+select * from sales_history
+
+
+
+merge into sales_history sh using(select product,month,amount from sales)s 
+on (s.product=sh.product) 
+when matched then update set sh.month=s.month,sh.amount=s.amount 
+when not matched then insert(sh.product,sh.month,sh.amount)
+values(s.product,s.month,s.amount);

@@ -1,0 +1,13 @@
+
+set serveroutput on
+declare
+v_employee_id employees.employee_id%type :=&vno;
+v_salary employees.salary%type :=&sal;
+begin
+update employees set salary = o_salary where employee_id = v_employee_id;
+if sql%notfound  then
+dbms_output.put_line('salary has been updated');
+else
+dbms_output.put_line(sql%rowcount||'no employees found with that employee_id');
+end if;
+end;

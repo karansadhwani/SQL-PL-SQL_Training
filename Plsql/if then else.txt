@@ -1,0 +1,14 @@
+
+set serveroutput on;
+declare
+myage number := &myage;
+begin
+if myage < 11
+then
+dbms_output.put_line('I am a Child');
+else
+dbms_output.put_line('I am not a Child');
+end if;
+end;
+
+

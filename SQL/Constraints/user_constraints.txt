@@ -1,0 +1,12 @@
+CREATE TABLE CDEPARTMENTS
+(DEPARTMENT_ID number(5)  primary key);
+
+select * from user_constraints where table_name='CDEPARTMENTS'
+
+
+
+CREATE TABLE CDEPARTMENTS
+(DEPARTMENT_ID number(5) constraint CDEPT_DEPTID_PK primary key);
+
+select * from user_constraints where table_name='CDEPARTMENTS'
+ 

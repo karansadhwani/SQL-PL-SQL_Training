@@ -1,0 +1,13 @@
+create table test1(slno varchar2(20));
+insert into test1 values(09099090909990);
+insert into test1 values(23);
+insert into test1 values(5454);
+insert into test1 values (596);
+insert into test1 values(777777);
+insert into test1 values (88888888);
+
+commit;
+
+select * from test1 order by slno
+
+select * from test1 order by to_number(slno);

@@ -1,0 +1,6 @@
+ SELECT staff_name "Employee",
+   LEVEL, SYS_CONNECT_BY_PATH(staff_name, '/') "Path"
+   FROM staff
+   WHERE level <= 6
+   START WITH staff_name = 'Pushpal kapadia'
+   CONNECT BY  PRIOR staff_id = manager_id AND LEVEL <= 6;

@@ -1,0 +1,25 @@
+SELECT name, type, referenced_name, referenced_type
+FROM   user_dependencies
+WHERE  referenced_name IN ('EMPLOYEES','EMP_VW' ); 
+
+
+CREATE VIEW commissioned AS
+SELECT first_name, last_name, commission_pct FROM employees
+WHERE commission_pct > 0.00;
+
+
+CREATE VIEW six_figure_salary AS
+SELECT * FROM employees
+WHERE salary >= 100000;
+
+
+SELECT object_name, status 
+FROM user_objects 
+WHERE object_type = 'VIEW';
+
+
+ALTER TABLE employees MODIFY email VARCHAR2(50);
+
+SELECT object_name, status 
+FROM user_objects 
+WHERE object_type = 'VIEW'; 

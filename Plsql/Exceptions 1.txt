@@ -1,0 +1,16 @@
+
+set serveroutput on
+DECLARE
+  l_name departments.DEPARTMENT_ID%TYPE;
+BEGIN
+  SELECT DEPARTMENT_NAME
+        INTO l_name
+      FROM departments;
+EXCEPTION
+WHEN TOO_MANY_ROWS THEN
+  DBMS_OUTPUT.PUT_LINE('SQLCODE: '||SQLCODE);
+ DBMS_OUTPUT.PUT_LINE('SQLERRM: '||SQLERRM);
+END;
+
+
+

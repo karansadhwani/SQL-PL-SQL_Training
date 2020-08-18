@@ -1,0 +1,16 @@
+-- Normal index
+
+create index indx_name on table_name(col_name);
+
+-- unique index
+create unique index ind_name on table_name(col_name);
+
+-- Composite index
+create index ind_name on table_name(col_name,col_name);
+
+
+-- Function based index
+   create index x on employees(upper(last_name));
+
+
+

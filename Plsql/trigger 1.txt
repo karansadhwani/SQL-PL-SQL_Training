@@ -1,0 +1,14 @@
+create table emp1(empno number,sal number);
+
+
+create or replace trigger trg_inst
+before insert on emp1
+for each row
+begin
+if :new.sal<5000 then
+raise_application_error(-20009,'sal should be above 5000');
+end if;
+end;
+
+
+insert into emp1(empno,sal)values(102,4900)

@@ -1,0 +1,12 @@
+ 
+Select  * from employees  where salary  > (select min(salary) from employees group by department_id);
+Select  * from employees  where salary  = (select min(salary) from employees group by department_id);
+Select  * from employees  where salary  like (select min(salary) from employees group by department_id);
+Select  * from employees  where salary  between (select min(salary) from employees group by department_id);
+
+
+
+Select  distinct department_id from employees  where salary >any (select avg(salary) from employees group by department_id);
+Select  * from employees  where salary in (select min(salary) from employees group by department_id);
+Select  * from employees  where salary not in (select min(salary) from employees group by department_id);
+ployees group by department_id);

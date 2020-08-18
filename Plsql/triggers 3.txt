@@ -1,0 +1,7 @@
+create table emp3(empno number,name varchar2(20),sal number);
+
+create table log(
+log_date date,
+log_user varchar2(20),
+log_description varchar2(20))
+

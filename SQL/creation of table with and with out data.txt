@@ -1,0 +1,7 @@
+-- creation of table with data
+create table employees_backup as select * from employees where 1=1
+
+
+-- creation of table with out data
+
+create table employees_temp as select * from employees where 1=2

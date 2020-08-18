@@ -1,0 +1,27 @@
+
+*	Zero or more occurrences of the previous character
+
++	One or more occurrences of the previous character
+
+^	Matches beginning of the string. For example, 
+        ^A means the string must start with A
+
+$	Matches end of the string. For example, A$ means string must end with A
+
+
+|	Alternate operator. Either of the expressions must be a match. expr1|expr2 
+        means either expr1 or expr2 must be a match.
+
+.	Any character matches this position
+
+
+
+
+
+SELECT first_name, last_name
+FROM employees
+WHERE REGEXP_LIKE (first_name, '^Ste(v|ph)en$');
+
+
+select * from employees
+where regexp_like(to_char(hire_date,'RRRR'),'^198[2-7]$');

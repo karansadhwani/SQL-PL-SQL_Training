@@ -1,0 +1,17 @@
+create table emp2(empno number,sal number);
+
+insert into emp2(empno,sal)values(100,30000)
+
+commit;
+
+create or replace trigger sal_chk
+before update of sal on emp2
+for each row
+begin
+if :new.sal< :old.sal then
+raise_application_error(-20009,'no such possibility');
+end if;
+end;
+
+
+update emp2 set sal=29000 where empno=100

@@ -1,0 +1,8 @@
+set serveroutput on;
+ declare
+ cursor c1 is select * from employees;
+ begin
+ for i in c1 loop
+ dbms_output.put_line(i.employee_id||' '||i.first_name||' '||i.job_id);
+ end loop;
+ end;

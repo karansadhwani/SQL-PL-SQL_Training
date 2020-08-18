@@ -1,0 +1,22 @@
+create table emp_bus_fare(route_number varchar2(2),
+travel_km number(2,0),bus_amount number(4,0))
+
+insert into emp_bus_fare values ('2A',20,1400);
+insert into emp_bus_fare values ('2A',30,1800);
+insert into emp_bus_fare values ('3B',20,1400);
+insert into emp_bus_fare values ('3B',30,1800);
+
+
+
+create table emp_travel_amt(
+employee_id number(6,0),
+travel_start_dt date,
+travel_end_dt date,
+route_number varchar2(2),
+travel_km number(4));
+
+
+insert into emp_travel_amt values('104','01-MAY-2011','31-MAY-2011','2A','20');
+insert into emp_travel_amt values('145','01-MAY-2011','31-MAY-2011','3B','30');
+
+

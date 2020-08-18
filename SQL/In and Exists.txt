@@ -1,0 +1,15 @@
+create table emp_cop_backup
+as
+select * from employees
+
+insert into emp_cop_backup
+select *
+from emp_cop_backup
+
+select * from emp_cop_backup
+where first_name in(select first_name from emp_cop_backup
+where first_name='Neena')
+
+select * from emp_cop_backup
+where exists(select first_name from emp_cop_backup
+where first_name='Neena')
